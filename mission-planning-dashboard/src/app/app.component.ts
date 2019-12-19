@@ -1,10 +1,24 @@
-import { Component } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
 
-@Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+import { AppComponent } from './app.component';
+import { HeaderComponent } from './header/header.component';
+import { CrewComponent } from './crew/crew.component';
+import { EquipmentComponent } from './equipment/equipment.component';
+import { ExperimentsComponent } from './experiments/experiments.component';
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    CrewComponent,
+    EquipmentComponent,
+    ExperimentsComponent
+  ],
+  imports: [
+    BrowserModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
 })
-export class AppComponent {
-  title = 'mission-planning-dashboard';
-}
+export class AppModule { }
